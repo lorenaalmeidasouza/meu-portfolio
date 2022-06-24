@@ -1,0 +1,250 @@
+/*O * significa que tudo no CSS funcionará no site*/
+            
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+/*O outline é altura e largura*/
+}
+            
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+            
+li {
+    list-style: none;
+    text-decoration: none;
+}
+            
+.header-menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding: 08px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    height: 10px;
+    background-color: #010042;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: normal;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+/*formação, portfolio e blog*/
+            
+.header-menu nav {
+    display: contents;
+    justify-content: flex-end;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+/*formação, portfolio e blog*/
+            
+.lista-menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+            
+.lista-menu li>a:hover {
+    color: rgb(184, 223, 255);
+    font-size: 18px;
+    background-color: #010042;
+    border-radius: 10%;
+    text-decoration: none;
+}
+            
+.principal {
+    height: 100vh;
+    display: flex;
+    background-image: url(img/astronomy.jpg);
+    background-blend-mode: color-dodge;
+}
+/*O container pega a página toda e não precisa estar no header (pois ele é o cabeçalho), ele faz a adaptação disposotivo para não desconfigurar*/
+            
+.container {
+    margin-right: auto;
+    /*margem automatica para todos os lados*/
+    margin-left: auto;
+    /*margem esquerda*/
+    max-width: 960px;
+    /*margem automatica para todos os lados*/
+    padding-left: 100px;
+    /*espaçamento esquerdo*/
+    padding-right: 100px;
+    /*espaçamento direito*/
+    width: 100%;
+    /*largura*/
+}
+            
+.subcontainer-principal {
+    display: flex;
+    flex-direction: row-reverse;
+    /*o column é uma coluna, um embaixo do outro*/
+    justify-content: space-between;
+    align-items: center;
+    /*tudo o que tem dentro fica centralizado*/
+    flex-wrap: nowrap;
+}
+/*imagem*/
+            
+.subcontainer-principal img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    float: left;
+    border-radius: 50%;
+    background-size: contain;
+    background-attachment: fixed;
+    box-shadow: 0 0 2em rgb(244, 244, 255);
+}
+            
+.nome-completo {
+    font-size: 39px;
+    color: #ffffff;
+    font-weight: 700;
+    height: 45px;
+    /*altura da letra*/
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: dashed;
+    text-transform: none;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    margin-right: 10px;
+    justify-content: center;
+}
+            
+.descricao {
+    text-align: justify;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #0b0c0c;
+    font-weight: 900;
+    margin-top: 20px;
+}
+            
+.profissao {
+    font-size: 20px;
+    line-height: 40px;
+    color: #b1c1e2;
+    text-align: center;
+}
+            
+.article-lista {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+            
+.topico-principal {
+    font-size: 36px;
+    color: #010042;
+}
+            
+.lista-item {
+    padding: 32px;
+}
+            
+.lista-item ul li {
+    margin-bottom: 32px;
+}
+            
+.lista-titulo {
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: #104ca5;
+    font-weight: 700;
+}
+            
+.lista-local {
+    font-size: 18px;
+    color: #2f80ed;
+    cursor: pointer;
+}
+            
+.lista-descricao {
+    font-size: 18px;
+    margin-top: 5px;
+    line-height: 20px;
+    color: #828282;
+    font-weight: 300;
+}
+            
+.wrapper-portifolio {
+    background-color: #e0f6ff;
+    display: flex;
+    flex-direction: column;
+}
+            
+.subtitulo-lista {
+    font-size: 18px;
+    color: #828282;
+    font-weight: 500;
+}
+            
+.rodape {
+    display: flex;
+    background-color: #010042;
+    flex-direction: column;
+    padding: 10px;
+    /*o padding é o espaçamento dos 4 cantos*/
+}
+            
+.sub-rodape ul li {
+    color: #fff;
+    padding-left: 30px;
+    line-height: 30px;
+    text-decoration: #fdfeff;
+}
+            
+.link {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: none;
+}
+            
+.estilo-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+.coluna-50 {
+    width: 65%;
+}
+            
+.coluna-40 {
+    width: 35%;
+}
+            
+.logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    border-radius: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 50px;
+    margin-top: -25px;
+    opacity: 60%;
+}
+            
+.fundo {
+    opacity: 0.5;
+}
+            
+.link-superior {
+    color: #b1c1e2;
+}
