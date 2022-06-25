@@ -1,22 +1,22 @@
 /*O * significa que tudo no CSS funcionará no site*/
-
+            
 * {
     margin: 0;
     padding: 0;
     outline: 0;
-    /*O outline é altura e largura*/
+/*O outline é altura e largura*/
 }
-
+            
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
-
+            
 li {
     list-style: none;
     text-decoration: none;
 }
-
+            
 .header-menu {
     display: flex;
     position: fixed;
@@ -34,10 +34,8 @@ li {
     flex-wrap: nowrap;
     flex-direction: row;
 }
-
-
 /*formação, portfolio e blog*/
-
+            
 .header-menu nav {
     display: contents;
     justify-content: flex-end;
@@ -45,10 +43,8 @@ li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
 }
-
-
 /*formação, portfolio e blog*/
-
+            
 .lista-menu {
     display: flex;
     justify-content: space-evenly;
@@ -57,7 +53,7 @@ li {
     color: #fff;
     font-size: 18px;
 }
-
+            
 .lista-menu li>a:hover {
     color: rgb(184, 223, 255);
     font-size: 18px;
@@ -65,17 +61,16 @@ li {
     border-radius: 10%;
     text-decoration: none;
 }
-
+            
 .principal {
     height: 100vh;
     display: flex;
     background-image: url(img/astronomy.jpg);
     background-blend-mode: color-dodge;
+    width: 100%;
 }
-
-
 /*O container pega a página toda e não precisa estar no header (pois ele é o cabeçalho), ele faz a adaptação disposotivo para não desconfigurar*/
-
+            
 .container {
     margin-right: auto;
     /*margem automatica para todos os lados*/
@@ -90,7 +85,7 @@ li {
     width: 100%;
     /*largura*/
 }
-
+            
 .subcontainer-principal {
     display: flex;
     flex-direction: row-reverse;
@@ -100,23 +95,32 @@ li {
     /*tudo o que tem dentro fica centralizado*/
     flex-wrap: nowrap;
 }
-
-
 /*imagem*/
-
-.subcontainer-principal img {
+            
+.subcontainer-principal {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
-    float: left;
-    border-radius: 50%;
-    background-size: contain;
-    background-attachment: fixed;
-    box-shadow: 0 0 2em rgb(244, 244, 255);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+      
 }
 
+.lorena {
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    box-shadow: 0 0 2em rgb(244, 244, 255);
+   
+
+}
+            
 .nome-completo {
     font-size: 39px;
     color: #ffffff;
@@ -130,8 +134,9 @@ li {
     margin-left: -10px;
     margin-right: 10px;
     justify-content: center;
+    text-align: center;
 }
-
+            
 .descricao {
     text-align: justify;
     font-weight: bold;
@@ -141,47 +146,47 @@ li {
     font-weight: 900;
     margin-top: 20px;
 }
-
+            
 .profissao {
     font-size: 20px;
     line-height: 40px;
     color: #b1c1e2;
     text-align: center;
 }
-
+            
 .article-lista {
     display: flex;
     flex-direction: column;
     margin-top: 100px;
     margin-bottom: 100px;
 }
-
+            
 .topico-principal {
     font-size: 36px;
     color: #010042;
 }
-
+            
 .lista-item {
     padding: 32px;
 }
-
+            
 .lista-item ul li {
     margin-bottom: 32px;
 }
-
+            
 .lista-titulo {
     margin-bottom: 5px;
     font-size: 22px;
     color: #104ca5;
     font-weight: 700;
 }
-
+            
 .lista-local {
     font-size: 18px;
     color: #2f80ed;
     cursor: pointer;
 }
-
+            
 .lista-descricao {
     font-size: 18px;
     margin-top: 5px;
@@ -189,19 +194,19 @@ li {
     color: #828282;
     font-weight: 300;
 }
-
+            
 .wrapper-portifolio {
     background-color: #e0f6ff;
     display: flex;
     flex-direction: column;
 }
-
+            
 .subtitulo-lista {
     font-size: 18px;
     color: #828282;
     font-weight: 500;
 }
-
+            
 .rodape {
     display: flex;
     background-color: #010042;
@@ -209,33 +214,26 @@ li {
     padding: 10px;
     /*o padding é o espaçamento dos 4 cantos*/
 }
-
+            
 .sub-rodape ul li {
     color: #fff;
     padding-left: 30px;
     line-height: 30px;
     text-decoration: #fdfeff;
 }
-
+            
 .link {
     color: rgb(255, 255, 255);
     cursor: pointer;
     text-decoration: none;
 }
-
+            
 .estilo-icon {
     margin-right: 10px;
     font-size: 20px;
 }
 
-.coluna-50 {
-    width: 65%;
-}
-
-.coluna-40 {
-    width: 35%;
-}
-
+            
 .logo {
     width: 60px;
     height: 60px;
@@ -249,28 +247,67 @@ li {
     margin-top: -25px;
     opacity: 60%;
 }
-
+            
 .fundo {
     opacity: 0.5;
 }
-
+            
 .link-superior {
     color: #b1c1e2;
 }
 
-@media screen and (min-width: 280px) and (max-width: 1000px){
-    .container div .subcontainer-principal{       
-    }
-        
+@media (max-width: 280px) and (max-width: 600px){
+    .container, .rodape, .wrapper-portifolio, .article-lista {
+        width: 100%;
     }
 
-    .foto {
-        width: 200px;
-        padding-top: 120px;    
+    .subcontainer-principal {      
+        width: 100%;
     }
+        
     .nome-completo {
-        height: 45px;
-        width: 100%
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            text-align: height;
+    }   
+
+    .descricao, .profissao {
+        width: 100%;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            text-align: height;
+            font-size: 20px;
+    }
+
+    .lorena {
+        width:100%;
+    }        
+
+    .lista-menu{
+        display: flex;
+        justify-content: space-evenly; /*Espaçamento entre eles seja igual*/
+        width: 100%;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px){
+    .container div {       
+    }
+    .subcontainer-principal {       
+    }
+
+    .lorena {
+        width:100%;        
+    }
+
+    .nome-completo, .descricao, .profissao {
+        width: 100%;
+        justify-content: center;
     }
     .lista-menu{
         display: flex;
